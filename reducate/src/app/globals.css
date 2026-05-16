@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  /* Luxury Academic Palette */
+  --background: #fdfcf0; /* Warm Cream / Silk */
+  --foreground: #1a1a1a; /* Matte Black */
+  --primary: #1a1a1a;
+  --primary-foreground: #ffffff;
+  --secondary: #c5a059; /* Polished Gold */
+  --secondary-foreground: #ffffff;
+  --accent: #8b7346; /* Bronze */
+  --accent-foreground: #ffffff;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --border: #e8e6d1;
+  --ring: #c5a059;
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)] antialiased font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight font-medium;
+  }
+}
+
+@utility glass {
+  @apply bg-white/40 backdrop-blur-md border border-white/20 shadow-sm;
+}
+
+@utility text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-stone-900 to-stone-600;
+}
+
+@utility section-padding {
+  @apply py-28 px-6 md:px-12 lg:px-32;
+}
+
+@utility btn-primary {
+  @apply bg-stone-900 text-white px-10 py-4 rounded-none font-medium hover:bg-stone-800 transition-all shadow-xl active:scale-[0.98] flex items-center justify-center gap-2 border border-stone-900 uppercase tracking-widest text-[10px];
+}
+
+@utility btn-secondary {
+  @apply bg-transparent text-stone-900 border border-stone-300 px-10 py-4 rounded-none font-medium hover:bg-stone-50 transition-all active:scale-[0.98] flex items-center justify-center gap-2 uppercase tracking-widest text-[10px];
+}
+
+.hero-pattern {
+  background-image: radial-gradient(#d4d2bc 0.5px, transparent 0.5px);
+  background-size: 40px 40px;
+}
+
+.academic-border {
+  @apply border border-stone-200 p-1.5 bg-white shadow-2xl;
+}
+
+.luxury-line {
+  @apply h-[1px] bg-stone-200 w-full;
+}
+
+@keyframes slowFade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-luxury {
+  animation: slowFade 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
