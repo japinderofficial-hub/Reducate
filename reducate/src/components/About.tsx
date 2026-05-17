@@ -82,10 +82,6 @@ const About = () => {
             
             {/* Luxury Floating Badge */}
             <div className="absolute -bottom-12 -left-12 bg-stone-900 text-white p-10 shadow-2xl max-w-[240px] border border-white/10">
-              <p className="text-5xl font-serif text-secondary mb-2 italic">59+</p>
-              <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-stone-400 leading-relaxed">
-                Years of Dedicated Educational Leadership
-              </p>
             </div>
           </motion.div>
         </div>
